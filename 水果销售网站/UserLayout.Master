@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserLayout.master.cs" Inherits="水果销售网站.UserLayout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="File/Bootstrap/Scripts/jquery-3.3.1.min.js"></script>
+    <link href="File/Bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />
+    <script src="File/Bootstrap/Scripts/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="panel-body" style="background-image: url('Image/BackGround.jpg'); height: 400px">
+                <h1 style="color: white; font-size: 50px" class="text-center">水果销售网站</h1>
+            </div>
+            <div class="navbar navbar-inverse" style="height: 50px">
+                <div>
+                    <ul class="nav nav-pills">
+                        <li><a href="Home.aspx">首页</a></li>
+                        <li><a href="FruitView.aspx">水果信息</a></li>
+                        <li><a href="UserInfoPanel.aspx">个人信息</a></li>
+                        <li>
+                            <asp:LinkButton ID="LinkButton1" runat="server" Visible="False" PostBackUrl="~/UserManageAddress.aspx">我的收货地址</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="LinkButton2" runat="server" Visible="False" PostBackUrl="~/UserInsertAddress.aspx">添加我的收货地址</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="LinkButton3" runat="server" Visible="False" PostBackUrl="~/UserOrderPanel.aspx">我的订单</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="LinkButton4" runat="server" Visible="False" PostBackUrl="~/MyCart.aspx">我的购物车</asp:LinkButton></li>
+
+                        <li><a href="LoginPanel.aspx">登陆</a></li>
+                        <li><a href="AdminLogin.aspx">管理员入口</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>
